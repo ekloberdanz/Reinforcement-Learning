@@ -1,0 +1,10 @@
+The implemented double Q-learning algorithm utilizes two neural networks – primary and target
+neural network. The primary network is trained using back-propagation, whereas the target network
+is not. Instead, the target network is updated every x number of steps by setting its parameters to the
+model parameters of the primary network that are learned through back-propagation. The primary
+and target neural nets have the same architectures – they are both deep fully connected neural nets
+with 64 neurons in the first layer, 20 neurons in the second layer and 3 neurons in the last layer – the
+3 neurons in the last layer represent the three possible actions. The input dimension on the neural
+nets is a 1-d array of six numbers and the non-linear activation function is relu. The last layer uses a
+linear action function.
+The envirnoment the algorithm is tested in is Acrobot-v1 taken from the OpenAI Gym package.
